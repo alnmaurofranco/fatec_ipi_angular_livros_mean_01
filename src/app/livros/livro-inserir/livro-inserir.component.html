@@ -1,0 +1,32 @@
+<h2 class="title">📚 Inserção de livro</h2>
+
+<mat-form-field appearance="fill">
+  <mat-label>Titulo</mat-label>
+  <input matInput type="text" placeholder="Digite o titulo..." [(ngModel)]="title">
+  <button *ngIf="title" matSuffix mat-icon-button (click)="title=''">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Autor</mat-label>
+  <input matInput type="text" placeholder="Digite o autor..." [(ngModel)]="author">
+  <button *ngIf="author" matSuffix mat-icon-button (click)="author=''">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Número de páginas</mat-label>
+  <input matInput type="text" placeholder="Digite número de páginas..." [(ngModel)]="numberOfPages">
+  <button *ngIf="numberOfPages" matSuffix mat-icon-button (click)="numberOfPages=''">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+
+<button mat-raised-button color="primary" type="button" (click)="onAddBook()">
+  <mat-icon>
+    bookmark_add
+  </mat-icon>
+  Cadastrar
+</button>
